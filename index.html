@@ -3,65 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <title>Propose Day 💖</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      width: 260px;
+    }
+
+    button {
+      border: none;
+      padding: 10px 18px;
+      margin: 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    #yesBtn {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background: #ddd;
+      position: absolute;
+    }
+
+    .kiss {
+      font-size: 40px;
+      animation: pop 1s infinite alternate;
+    }
+
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container" id="gate">
-  <h1>Hey 💖 Avni 😘</h1>
-  <p>I have something special for you 💍✨</p>
-  <h2>Do you love me? 💕</h2>
+  <div class="card" id="card">
+    <h2>Hey 💖 Avni 😘</h2>
+    <p>Do you love me? 💕</p>
 
-  <div class="buttons">
     <button id="yesBtn">Yes 💖</button>
     <button id="noBtn">No 😜</button>
   </div>
-</div>
 
-<div class="container" id="content" style="display:none;">
-  <h1>Happy Propose Day 💍❤️</h1>
-  <h2>Anjali 💖</h2>
-  <p>
-    Aaj dil se ek baat kehni hai 💕<br>
-    Tum meri life ka sabse special hissa ho 😘✨<br><br>
-    <b>Will you be mine forever? 💞</b>
-  </p>
-
-  <img class="kiss"
-    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmR2dHNrNXJ6YzZqY2l0d2l4eXJ6YzVnMWo5aHZ4dDJ6cWl3b3B6YSZjdD1n/3oz8xsaLjLVqVXr3tS/giphy.gif"
-    alt="kiss gif">
-</div>
-
-<div class="hearts"></div>
-
-<script src="script.js"></script>
   <script>
-  const yesBtn = document.getElementById("yesBtn");
-  const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const card = document.getElementById("card");
 
-  yesBtn.addEventListener("click", () => {
-    document.body.innerHTML = `
-      <div style="
-        height:100vh;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        background:pink;
-        font-family:sans-serif;
-        text-align:center;
-      ">
-        <h1>💖 I knew it Anvi 😘<br>Happy Propose Day 💍💋</h1>
-      </div>
-    `;
-  });
+    noBtn.onmouseover = () => {
+      noBtn.style.left = Math.random() * 200 + "px";
+      noBtn.style.top = Math.random() * 200 + "px";
+    };
 
-  noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - 100);
-    const y = Math.random() * (window.innerHeight - 50);
-    noBtn.style.position = "absolute";
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
-  });
+    yesBtn.onclick = () => {
+      card.innerHTML = `
+        <h2>💍 I knew it Avni 💖</h2>
+        <p>Happy Propose Day ❤️</p>
+        <div class="kiss">💋💖💋</div>
+      `;
+    };
   </script>
+
 </body>
 </html>
