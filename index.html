@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Propose Day 💖</title>
+<meta charset="UTF-8">
+<title>Chocolate Day 🍫</title>
 
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
-      font-family: Arial, sans-serif;
-    }
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #5a2d0c, #d2691e);
+    font-family: Arial, sans-serif;
+  }
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      width: 260px;
-    }
+  .card {
+    background: #fff3e0;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    position: relative;
+  }
 
-    button {
-      border: none;
-      padding: 10px 18px;
-      margin: 10px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 14px;
-    }
+  h2 {
+    color: #6b2e0f;
+  }
 
-    #yesBtn {
-      background: #ff4d6d;
-      color: white;
-    }
+  button {
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
 
-    #noBtn {
-      background: #ddd;
-      position: absolute;
-    }
+  #yesBtn {
+    background: #8b4513;
+    color: white;
+  }
 
-    .kiss {
-      font-size: 40px;
-      animation: pop 1s infinite alternate;
-    }
+  #noBtn {
+    background: #ddd;
+    position: absolute;
+  }
 
-    @keyframes pop {
-      from { transform: scale(1); }
-      to { transform: scale(1.2); }
-    }
-  </style>
+  .choco {
+    font-size: 45px;
+    animation: pop 1s infinite alternate;
+  }
+
+  @keyframes pop {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+  }
+</style>
 </head>
 
 <body>
 
-  <div class="card" id="card">
-    <h2>Hey 💖 Avni 😘</h2>
-    <p>Do you love me? 💕</p>
+<div class="card" id="card">
+  <h2>Hey 💖 Avni 😘</h2>
+  <p>Will you be my sweet chocolate? 🍫❤️</p>
 
-    <button id="yesBtn">Yes 💖</button>
-    <button id="noBtn">No 😜</button>
-  </div>
+  <button id="yesBtn">Yes 🍫💖</button>
+  <button id="noBtn">No 😜</button>
+</div>
 
-  <script>
-    const yesBtn = document.getElementById("yesBtn");
-    const noBtn = document.getElementById("noBtn");
-    const card = document.getElementById("card");
+<script>
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn = document.getElementById("noBtn");
+  const card = document.getElementById("card");
 
-    noBtn.onmouseover = () => {
-      noBtn.style.left = Math.random() * 200 + "px";
-      noBtn.style.top = Math.random() * 200 + "px";
-    };
+  noBtn.onmouseover = () => {
+    noBtn.style.left = Math.random() * 220 + "px";
+    noBtn.style.top = Math.random() * 220 + "px";
+  };
 
-    yesBtn.onclick = () => {
-      card.innerHTML = `
-        <h2>💍 I knew it Avni 💖</h2>
-        <p>Happy Propose Day ❤️</p>
-        <div class="kiss">💋💖💋</div>
-      `;
-    };
-  </script>
+  yesBtn.onclick = () => {
+    card.innerHTML = `
+      <h2>Happy Chocolate Day 🍫💖</h2>
+      <p>You are sweeter than chocolate 😘</p>
+      <div class="choco">🍫❤️🍫</div>
+    `;
+  };
+</script>
 
 </body>
 </html>
